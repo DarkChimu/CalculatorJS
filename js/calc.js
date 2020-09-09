@@ -6,10 +6,10 @@ const buttonNumber = document.getElementsByName("data-number");
 const buttonOpera = document.getElementsByName("data-opera");
 const buttonEqual = document.getElementsByName("data-equal")[0];
 const buttonDelete = document.getElementsByName("data-delete")[0];
-var result = document.getElementById('result');
-var currentOp = '';
-var lastOp = '';
-var operation = undefined;
+let result = document.getElementById('result');
+let currentOp = '';
+let lastOp = '';
+let operation = undefined;
 
 buttonNumber.forEach(function(button){
     button.addEventListener('click', function(){
@@ -57,7 +57,7 @@ buttonDelete.addEventListener('click', function(){
     }
 
  function calculate(){
-     var calc;
+     let calc;
      const last = parseFloat(lastOp);
      const current = parseFloat(currentOp);
 
