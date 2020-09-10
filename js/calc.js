@@ -11,6 +11,14 @@ let currentOp = '';
 let lastOp = '';
 let operation = undefined;
 
+
+document.addEventListener("keydown",function(e){
+    var key = e.keyCode || e.charCode;
+    if (key >= 48 && key <= 57) {
+        addNumber(key - 48);
+    };
+});
+
 buttonNumber.forEach(function(button){
     button.addEventListener('click', function(){
        addNumber(button.innerText);
