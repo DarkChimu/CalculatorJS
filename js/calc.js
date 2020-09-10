@@ -73,7 +73,10 @@ buttonDelete.addEventListener('click', function(){
              calc = last * current;
              break;
          case '/':
-             calc = last / actual;
+             calc = last / current;
+             if(current == 0){
+                 alert("Can't divide between 0");
+             }
              break;
          default:
              return;
